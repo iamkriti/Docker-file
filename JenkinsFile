@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage( 'Docker build') {
+            steps {
+                sh 'docker build -t iamkriti Docker-file:latest .'
+            }
+        }
+    }
+}
